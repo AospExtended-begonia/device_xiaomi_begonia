@@ -23,10 +23,9 @@ $(call inherit-product, device/xiaomi/begonia/device.mk)
 # Inherit from begonia interfaces makefile
 $(call inherit-product, device/xiaomi/begonia/mtk-interfaces.mk)
 
-# Inherit some PE source stuff
-TARGET_SUPPORTS_QUICK_TAP := true
+# Inherit some AEX source stuff
+$(call inherit-product, vendor/aosp/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 2340
